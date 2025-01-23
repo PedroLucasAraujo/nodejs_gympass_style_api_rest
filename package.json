@@ -4,7 +4,9 @@
   "description": "Esse projeto se trata um API REST para um aplicativo como gympass, totalpass, aonde é possível fazer check-in nas academias (cadastro, paga valor mensal, dá acesso a x números de vezes que pode ir e academia, indepedente da academia, algumas disponíveis para cada planos)",
   "main": "index.js",
   "dependencies": {
-    "fastify": "4.13.0"
+    "dotenv": "16.4.7",
+    "fastify": "4.13.0",
+    "zod": "3.24.1"
   },
   "devDependencies": {
     "@types/node": "18.14.1",
