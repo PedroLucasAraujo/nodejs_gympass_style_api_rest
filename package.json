@@ -4,6 +4,7 @@
   "description": "Esse projeto se trata um API REST para um aplicativo como gympass, totalpass, aonde é possível fazer check-in nas academias (cadastro, paga valor mensal, dá acesso a x números de vezes que pode ir e academia, indepedente da academia, algumas disponíveis para cada planos)",
   "main": "index.js",
   "dependencies": {
+    "@prisma/client": "6.2.1",
     "dotenv": "16.0.3",
     "fastify": "4.13.0",
     "zod": "3.20.6"
@@ -12,6 +13,7 @@
     "@rocketseat/eslint-config": "1.2.0",
     "@types/node": "18.14.1",
     "eslint": "8.34.0",
+    "prisma": "6.2.1",
     "tsup": "6.6.3",
     "tsx": "3.12.3",
     "typescript": "4.9.5"
