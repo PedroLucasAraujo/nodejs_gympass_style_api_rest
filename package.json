@@ -4,13 +4,13 @@
   "description": "Esse projeto se trata um API REST para um aplicativo como gympass, totalpass, aonde é possível fazer check-in nas academias (cadastro, paga valor mensal, dá acesso a x números de vezes que pode ir e academia, indepedente da academia, algumas disponíveis para cada planos)",
   "main": "index.js",
   "dependencies": {
-    "fastify": "^4.13.0"
+    "fastify": "4.13.0"
   },
   "devDependencies": {
-    "@types/node": "^18.14.1",
-    "tsup": "^6.6.3",
-    "tsx": "^3.12.3",
-    "typescript": "^4.9.5"
+    "@types/node": "18.14.1",
+    "tsup": "6.6.3",
+    "tsx": "3.12.3",
+    "typescript": "4.9.5"
   },
   "scripts": {
     "start:dev": "tsx watch src/server.ts",
