@@ -14,7 +14,7 @@ Esse projeto se trata um API REST para um aplicativo como gympass, totalpass, ao
 - [] Deve ser possível o usuário realizar check-in em uma academia;
 - [] Deve ser possível validar o check in de um usuário;
 - [] Deve ser possível cadastrar uma academia;
- 
+
 ## RNS (Regras de Negócio)
 
 - [] O usuário não deve poder se cadastrar com um e-mail duplicado;
@@ -24,9 +24,17 @@ Esse projeto se trata um API REST para um aplicativo como gympass, totalpass, ao
 - [] O check in só pode ser validado por administradores
 - [] A academia só pode ser cadastrada por administradores;
 
-## RNFS (Requisitos Não Funcionais) 
+## RNFS (Requisitos Não Funcionais)
 
 - [] A senha do usuário precisa estar criptografada
 - [] Os dados precisam estar persistidos em um banco POSTGRESQL
-- [] Todas listas de dados precisam estar paginadas com 20  itens por página
+- [] Todas listas de dados precisam estar paginadas com 20 itens por página
 - [] O usuário deve ser identifiado por um JWT (JSON WEB TOKEN)
+
+- Um caso de uso serve para orquestrar as entidades e regras da aplicação
+- As principais responsibilidade dos Controllers é de intermedia a requisição, repassar os dados para os casos de uso retornar os dados quando necessário
+- "Salt" no contexto de hashing de senha, é um valor aleatório adicionado à senha antes de gerar o hash
+- O padrão repository serve para abstrair a persistÊncia de dados
+- No SOLID, a inversão de dependência serve par a evitar acoplamento e tornar a aplicação mais flexível
+- O principal benefício da utilização de interfaces de contrato na inversão de depência é permitir a substituição de implementações sem modificar o código cliente
+- Ao utilizar uma interface para um repositório, nossa aplicação dependerá de uma abstração e isso a tornará mais flexível e mnos acoplada
