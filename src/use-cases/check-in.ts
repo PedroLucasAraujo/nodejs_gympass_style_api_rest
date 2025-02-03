@@ -1,5 +1,5 @@
-import type { CheckIn } from "@prisma/client";
-import type { CheckInsRepository } from "@/repositories/check-ins-repository";
+import { CheckInsRepository } from "@/repositories/check-ins-repository";
+import { CheckIn } from "@prisma/client";
 
 interface CheckInUseCaseRequest {
   userId: string;
@@ -9,13 +9,23 @@ interface CheckInUseCaseRequest {
 interface CheckInUseCaseResponse {
   checkIn: CheckIn;
 }
+
 export class CheckInUseCase {
   constructor(private checkInsRepository: CheckInsRepository) {}
 
   async execute({
-    gymId,
     userId,
+    gymId,
   }: CheckInUseCaseRequest): Promise<CheckInUseCaseResponse> {
+    const checkInOnSameDay = await this.checkInsRepository.findByUserIdOnDate(
+      userId,
+      new Date()
+    );
+
+    if (checkInOnSameDay) {
+      throw new Error();
+    }
+
     const checkIn = await this.checkInsRepository.create({
       gym_id: gymId,
       user_id: userId,
