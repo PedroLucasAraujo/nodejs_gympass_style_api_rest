@@ -5,7 +5,7 @@ Esse projeto se trata um API REST para um aplicativo como gympass, totalpass, ao
 ## RFS (Requisitos Funcionais)
 
 - [x] Deve ser possível se cadastrar;
-- [] Deve ser possível se autenticar;
+- [x] Deve ser possível se autenticar;
 - [] Deve ser possível obter o perfil de um usuário logado;
 - [] Deve ser possível obter o número de check ins realizados pelo usuário logado;
 - [] Deve ser possível o usuário obter seu histórico de check ins;
@@ -27,7 +27,7 @@ Esse projeto se trata um API REST para um aplicativo como gympass, totalpass, ao
 ## RNFS (Requisitos Não Funcionais)
 
 - [x] A senha do usuário precisa estar criptografada
-- [] Os dados precisam estar persistidos em um banco POSTGRESQL
+- [x] Os dados precisam estar persistidos em um banco POSTGRESQL
 - [] Todas listas de dados precisam estar paginadas com 20 itens por página
 - [] O usuário deve ser identifiado por um JWT (JSON WEB TOKEN)
 
