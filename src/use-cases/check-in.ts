@@ -34,23 +34,18 @@ export class CheckInUseCase {
     }
 
     const distance = getDistanceBetweenCoordinates(
-      {
-        latitude: userLatitude,
-        longitude: userLongitude,
-      },
+      { latitude: userLatitude, longitude: userLongitude },
       {
         latitude: gym.latitude.toNumber(),
         longitude: gym.longitude.toNumber(),
       }
     );
 
-    const MAX_DISTANCE_IN_KILOMETERS = 0.1; // 100 meters / 0.1 km
+    const MAX_DISTANCE_IN_KILOMETERS = 0.1;
 
     if (distance > MAX_DISTANCE_IN_KILOMETERS) {
-      throw new Error("You are too far from the gym");
+      throw new Error();
     }
-
-    // calculate distance between user and gym
 
     const checkInOnSameDay = await this.checkInsRepository.findByUserIdOnDate(
       userId,
