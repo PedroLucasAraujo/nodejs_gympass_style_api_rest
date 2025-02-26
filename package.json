@@ -4,6 +4,7 @@
   "description": "Esse projeto se trata um API REST para um aplicativo como gympass, totalpass, aonde é possível fazer check-in nas academias (cadastro, paga valor mensal, dá acesso a x números de vezes que pode ir e academia, indepedente da academia, algumas disponíveis para cada planos)",
   "main": "index.js",
   "dependencies": {
+    "@fastify/jwt": "6.7.0",
     "@prisma/client": "6.2.1",
     "bcryptjs": "2.4.3",
     "dayjs": "1.11.13",
