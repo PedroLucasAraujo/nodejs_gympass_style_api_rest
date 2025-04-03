@@ -51,7 +51,7 @@ This project was built using the following technologies:
 To run the project locally, follow these steps:
 1. Clone the repository:
    ```sh
-   git clone [<repository-url>](https://github.com/PedroLucasAraujo/nodejs_gympass_style_api_rest)
+   git clone https://github.com/PedroLucasAraujo/nodejs_gympass_style_api_rest
    cd nodejs_gympass_style_api_rest
    ```
 2. Install dependencies:
